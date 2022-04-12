@@ -1,2 +1,2 @@
-# cyberpur.github.io
+# Cyberpur
 Cyberpur Documentation Website
