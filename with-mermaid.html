@@ -9,9 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sushantrahate/docsify-darkly-theme/css/darkly.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+    <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         .anchor span {
-            color : #f97316;;
+            color: #f97316;
+            ;
         }
     </style>
 </head>
@@ -19,6 +22,9 @@
 <body>
     <div id="app"></div>
     <script>
+        var num = 0;
+        mermaid.initialize({ startOnLoad: false });
+
         window.$docsify = {
             name: 'Cyberpur Knowledge base',
             repo: '',
@@ -38,6 +44,18 @@
                 // Headline depth, 1 - 6
                 depth: 2,
                 hideOtherSidebarContent: false // whether or not to hide other sidebar content
+            },
+            markdown: {
+                renderer: {
+                    code: function (code, lang) {
+                        if (lang === "mermaid") {
+                            return (
+                                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+                            );
+                        }
+                        return this.origin.code.apply(this, arguments);
+                    }
+                }
             }
         };
     </script>
