@@ -13,34 +13,24 @@
         content="https://docs.cyberpur.com/img/banner.png" />
     <meta property="og:url" content="https://docs.cyberpur.com" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-    <script>
-        // Public site only
-        if (!(/cyberpur/.test(location.host))) {
-            document.write(
-                '<link rel="stylesheet" href="./style.css">'
-            );
-        }
-    </script>
+    <link rel="stylesheet" href="./dark.min.css" />
     <style>
-        body {
-            font-size: 18px
-        }
-        .markdown-section code, .markdown-section pre {
-            background-color: #282828;
-        }
-        .markdown-section pre>code {
-            color:#f97316;
+        body, pre>code>span {
+            font-size: 18px;
         }
 
-        .sidebar h1 a {
+        .markdown-section pre>code, .sidebar h1 a, main p {
             color:#f97316;
+            font-size: 18px;
         }
 
-        main p {
-            color:#f97316
+        .sidebar-toggle {
+            background-color: #f97316;
         }
-        
+
+        .sidebar-toggle-button span {
+            background-color : white;
+        }
     </style>
 </head>
 
@@ -67,11 +57,17 @@
                 // Headline depth, 1 - 6
                 depth: 2,
                 hideOtherSidebarContent: false // whether or not to hide other sidebar content
-            }
+            },
+            pagination: {
+                crossChapter: true,
+                crossChapterText: true,
+            },
         };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>    
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
     <script>
         if (typeof navigator.serviceWorker !== 'undefined') {
             navigator.serviceWorker.register('sw.js')

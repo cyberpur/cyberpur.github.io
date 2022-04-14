@@ -1,3 +1,6 @@
 * [Home](/)
+  * [Vision](vision.md)
+  * [Mission](mission.md)
+  * [Action Plans](action-plan.md)
 * [Get Started](get-started.md)
 * [Guide](guide.md)
