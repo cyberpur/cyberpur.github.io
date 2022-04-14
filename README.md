@@ -1,2 +1,3 @@
 # Cyberpur
-Cyberpur Documentation Website
+Cyberpur Vision Documentation
+![logo](./img/cpur-vision.png)
