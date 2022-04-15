@@ -1246,5 +1246,15 @@
             <td>game</td>
             <td>mayayug</td>
         </tr>
+        <tr>
+            <th id="98">
+                99
+            </th>
+            <td>99</td>
+            <td>itcompany.png</td>
+            <td><a href="http://itcomapny.ltd">ITcompany.ltd</a></td>
+            <td>Business Incubation</td>
+            <td>ITcompany</td>
+        </tr>
     </tbody>
 </table>
